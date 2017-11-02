@@ -1,4 +1,4 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.17;
 import 'zeppelin-solidity/contracts/token/MintableToken.sol';
 
 contract VentureCoin is MintableToken {
