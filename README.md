@@ -40,8 +40,8 @@ Saving successful migration to network...
   ... 0xc868aa9b7f6efa82d8868c090fa051613a1c37cc037465a82e63266f236c9d83
 Saving artifacts...
 ```
-- you will have `VentureCoinCrowdsale: 0x3cb86548e387d0eb9dd8f0193b7ff73a32cfd5c4`
-- you will have `VentureCoinCrowdsale: 0x3cb86548e387d0eb9dd8f0193b7ff73a32cfd5c4`
+- you will have `VentureCoinCrowdsale Address: 0x3cb86548e387d0eb9dd8f0193b7ff73a32cfd5c4`
+- you will have `VentureCoin(VCN) Address 0x08834042cd3afb4c43190dec421cda51363af793`
 
 ## Step4: (potional)You may want to save the ABI file
 - go to build/contracts/VentureCoinCrowdsale
