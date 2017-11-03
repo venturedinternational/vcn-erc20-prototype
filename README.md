@@ -24,4 +24,8 @@ npm run migrate
 ```
 now the VCN ico contract is deployed to localhost:8545
 
-## Interactive with this crowdsale with this [daap](http://github.com/venturedinternational/ico-daap)
+## Interact with this crowdsale with this [daap](http://github.com/venturedinternational/ico-daap)
+
+
+## Author
+- Ventured Core Team
