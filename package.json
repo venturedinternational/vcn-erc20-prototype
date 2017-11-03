@@ -8,7 +8,8 @@
     "migrate": "rm -rf build && truffle compile && truffle migrate"
   },
   "keywords": [
-    "blockchain"
+    "blockchain",
+    "erc20"
   ],
   "author": "amazingandyyy",
   "license": "MIT",
