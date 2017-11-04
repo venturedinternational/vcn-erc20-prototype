@@ -2,7 +2,7 @@ const VentureCoinCrowdsale = artifacts.require("./VentureCoinCrowdsale.sol")
 
 module.exports = function(deployer, network, accounts) {
   // const startTime =  latestTime() + duration.days(3);  // + 3 days
-  const startTime =  latestTime() + duration.seconds(1); // + immediately
+  const startTime =  latestTime() + duration.seconds(120); // + immediately
   const endTime = startTime + duration.days(30); // + 30 days
   const rate = new web3.BigNumber(12);
   const wallet = accounts[0];
@@ -13,6 +13,8 @@ module.exports = function(deployer, network, accounts) {
     const instance = await VentureCoinCrowdsale.deployed();
     const token = await instance.token.call();
     console.log('-----> VentureCoin(VCN) Address', token);
+    console.log('-----> Parameters', 'startTime', 'endTime', 'rate', 'wallet');
+    console.log('-----> Parameters', startTime, endTime, rate.toString(), wallet);
   })
 };
 

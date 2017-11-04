@@ -5,7 +5,8 @@
   "main": "truffle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "rm -rf build && truffle compile && truffle migrate"
+    "migrate": "rm -rf build && truffle compile && truffle migrate",
+    "migrate:rinkeby": "rm -rf build && truffle compile && truffle migrate --network rinkeby"
   },
   "keywords": [
     "blockchain",
@@ -15,5 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "zeppelin-solidity": "git://github.com/OpenZeppelin/zeppelin-solidity.git#master"
+  },
+  "devDependencies": {
+    "bn.js": "^4.11.8",
+    "web3": "^1.0.0-beta.24"
   }
 }
