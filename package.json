@@ -18,7 +18,7 @@
     "zeppelin-solidity": "git://github.com/OpenZeppelin/zeppelin-solidity.git#master"
   },
   "devDependencies": {
-    "bn.js": "^4.11.8",
+    "truffle": "^4.0.1",
     "web3": "^1.0.0-beta.24"
   }
 }

@@ -4,7 +4,7 @@ module.exports = function(deployer, network, accounts) {
   // const startTime =  latestTime() + duration.days(3);  // + 3 days
   const startTime =  latestTime() + duration.seconds(120); // + immediately
   const endTime = startTime + duration.days(30); // + 30 days
-  const rate = new web3.BigNumber(12);
+  const rate = 12;
   const wallet = accounts[0];
   
   // deploy it here

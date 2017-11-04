@@ -1,7 +1,7 @@
 pragma solidity ^0.4.13;
 
+import './zeppelin-solidity/contracts/crowdsale/Crowdsale.sol';
 import './VentureCoin.sol';
-import 'zeppelin-solidity/contracts/crowdsale/Crowdsale.sol';
 
 contract VentureCoinCrowdsale is Crowdsale {
 
