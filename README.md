@@ -20,6 +20,7 @@ testrpc -u 0
 
 ## Step 3: New command line session and deploy contract to testrpc
 ```
+npm i
 npm run migrate
 ```
 now the VCN ico contract is deployed to localhost:8545, and you should see message as belowing:
