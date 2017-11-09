@@ -5,7 +5,7 @@ contract VentureCoin is MintableToken {
   string public name = "VentureCoin"; 
   string public symbol = "VCN";
   uint public decimals = 18;
-  uint public INITIAL_SUPPLY = 10000 * (10 ** decimals);
+  uint public INITIAL_SUPPLY = 100000000 * (10 ** decimals);
 
   function VentureCoin() {
     totalSupply = INITIAL_SUPPLY;
