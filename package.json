@@ -2,7 +2,6 @@
   "name": "vcn-erc20",
   "version": "1.0.0",
   "description": "ERC20 token for Venture Coin(VCN)",
-  "main": "truffle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "rm -rf build && truffle compile && truffle migrate",
@@ -15,7 +14,7 @@
   "author": "amazingandyyy",
   "license": "MIT",
   "dependencies": {
-    "helper-solidity": "git://github.com/OpenZeppelin/helper-solidity.git#master"
+    "zeppelin-solidity": "git://github.com/OpenZeppelin/zeppelin-solidity.git#master"
   },
   "devDependencies": {
     "truffle": "^4.0.1",

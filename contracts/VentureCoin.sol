@@ -1,5 +1,6 @@
 pragma solidity ^0.4.17;
-import './zeppelin-solidity/contracts/token/BurnableToken';
+
+import './zeppelin-solidity/contracts/token/MintableToken.sol';
 
 contract VentureCoin is MintableToken {
   string public name = "VentureCoin Beta"; 
