@@ -6,15 +6,20 @@ module.exports = function(deployer, network, accounts) {
   const endTime = startTime + duration.days(30); // + 30 days
   const rate = 8000;
   const wallet = accounts[0];
+  const cappedInWei = we3.eth.toWei(125000, "ether");
   
   // deploy it here
-  deployer.deploy(VentureCoinCrowdsale, startTime, endTime, rate, wallet)
+  deployer.deploy(VentureCoinCrowdsale, startTime, endTime, rate, wallet, cappedInWei)
   .then( async () => {
     const instance = await VentureCoinCrowdsale.deployed();
     const token = await instance.token.call();
     console.log('-----> VentureCoin(VCN) Address', token);
-    console.log('-----> Parameters', 'startTime', 'endTime', 'rate', 'wallet');
-    console.log('-----> Parameters', startTime, endTime, rate.toString(), wallet);
+    
+    console.log('-----> startTime:  ', startTime);
+    console.log('-----> endTime:    ', endTime);
+    console.log('-----> rate:       ', rate.toString());
+    console.log('-----> wallet:     ', wallet);
+    console.log('-----> cappedInWei:', cappedInWei);
   })
 };
 

@@ -15,7 +15,7 @@
   "author": "amazingandyyy",
   "license": "MIT",
   "dependencies": {
-    "zeppelin-solidity": "git://github.com/OpenZeppelin/zeppelin-solidity.git#master"
+    "helper-solidity": "git://github.com/OpenZeppelin/helper-solidity.git#master"
   },
   "devDependencies": {
     "truffle": "^4.0.1",
