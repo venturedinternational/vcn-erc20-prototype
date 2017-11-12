@@ -6,7 +6,7 @@ module.exports = function(deployer, network, accounts) {
   const endTime = startTime + duration.days(30); // + 30 days
   const rate = 8000;
   const wallet = accounts[0];
-  const cappedInWei = we3.eth.toWei(125000, "ether");
+  const cappedInWei = web3.toWei(125000, "ether");
   
   // deploy it here
   deployer.deploy(VentureCoinCrowdsale, startTime, endTime, rate, wallet, cappedInWei)
