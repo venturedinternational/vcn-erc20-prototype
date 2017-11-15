@@ -8,8 +8,8 @@ contract VentureCoin is MintableToken {
   uint public decimals = 18;
   uint public INITIAL_SUPPLY = 100000000 * (10 ** decimals);
 
-  function VentureCoin() {
+  function VentureCoin(address inventorAddr) {
     totalSupply = INITIAL_SUPPLY;
-    balances[msg.sender] = INITIAL_SUPPLY;
+    balances[inventorAddr] = INITIAL_SUPPLY;
   }
 }
