@@ -17,4 +17,4 @@ web3.eth.sendTransaction({from: account1, to: "0xD9dDC0A50F94d38514e02c70bcF0083
 
 
 // to start geth connected to rinkeby
-// geth --rinkeby --unlock 0 --rpc console
+// geth --rinkeby --rpc --unlock 0 console

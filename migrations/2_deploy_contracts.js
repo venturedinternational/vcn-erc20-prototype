@@ -1,26 +1,36 @@
 const VentureCoinCrowdsale = artifacts.require("./VentureCoinCrowdsale.sol")
+const Web3 = require('web3');
+var localWeb3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 module.exports = function(deployer, network, accounts) {
-  // const startTime =  latestTime() + duration.days(3);  // + 3 days
   const startTime =  latestTime() + duration.seconds(120); // + immediately
-  const endTime = startTime + duration.days(30); // + 30 days
+  const endTime = startTime + duration.hours(30); // + 30 minutes
   const rate = 8000;
   const wallet = accounts[0];
   const cappedInWei = web3.toWei(125000, "ether");
-  
+
   // deploy it here
   deployer.deploy(VentureCoinCrowdsale, startTime, endTime, rate, wallet, cappedInWei)
-  .then( async () => {
-    const instance = await VentureCoinCrowdsale.deployed();
-    const token = await instance.token.call();
-    console.log('-----> VentureCoin(VCN) Address', token);
-    
-    console.log('-----> startTime:  ', startTime);
-    console.log('-----> endTime:    ', endTime);
-    console.log('-----> rate:       ', rate.toString());
-    console.log('-----> wallet:     ', wallet);
-    console.log('-----> cappedInWei:', cappedInWei);
-  })
+    .then( async () => {
+      const instance = await VentureCoinCrowdsale.deployed();
+      const token = await instance.token.call();
+      console.log('-----> Token Address', token);
+      
+      console.log('-----> startTime:  ', startTime);
+      console.log('-----> endTime:    ', endTime);
+      console.log('-----> rate:       ', rate.toString());
+      console.log('-----> wallet:     ', wallet);
+      console.log('-----> cappedInWei:', cappedInWei);
+
+      var encoded = localWeb3.eth.abi.encodeParameters(
+          ['uint256', 'uint256', 'uint256', 'address', 'uint256'], 
+          [startTime, endTime, rate.toString(), wallet, cappedInWei]
+      )
+
+      console.log('-----> ABIencoded:');
+      console.log(encoded);
+
+    })
 };
 
 function latestTime() {
