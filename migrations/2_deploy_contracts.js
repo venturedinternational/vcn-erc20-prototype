@@ -3,11 +3,11 @@ const Web3 = require('web3');
 var localWeb3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 module.exports = function(deployer, network, accounts) {
-  const startTime =  latestTime() + duration.seconds(120); // + immediately
-  const endTime = startTime + duration.hours(30); // + 30 minutes
+  const startTime =  latestTime() + duration.minutes(480); // + 8 hrs
+  const endTime = startTime + duration.days(60); // + 60 days
   const rate = 8000;
   const wallet = accounts[0];
-  const cappedInWei = web3.toWei(125000, "ether");
+  const cappedInWei = web3.toWei(41625, "ether");
 
   // deploy it here
   deployer.deploy(VentureCoinCrowdsale, startTime, endTime, rate, wallet, cappedInWei)

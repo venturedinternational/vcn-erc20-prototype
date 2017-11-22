@@ -15,6 +15,6 @@ crowdsale.token().then(addr => { console.log(addr) } )
 
 web3.eth.sendTransaction({from: account1, to: "0xD9dDC0A50F94d38514e02c70bcF00835B3Ba3F71", value: web3.toWei(1, "ether")})
 
-
 // to start geth connected to rinkeby
-// geth --rinkeby --rpc --unlock 0 console
+// geth --cache 4096 --rinkeby --unlock 0 --rpc console
+// geth --cache 4096 --rpc --unlock "ad6e6dd7b3649102ee5649fc4290af639a87f707" console

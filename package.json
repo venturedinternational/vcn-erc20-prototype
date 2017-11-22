@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "rm -rf build && truffle compile && truffle migrate",
     "migrate:r": "npm run migrate:rinkeby",
-    "migrate:rinkeby": "rm -rf build && truffle compile && truffle migrate --network rinkeby"
+    "migrate:rinkeby": "rm -rf build && truffle compile && truffle migrate --network rinkeby",
+    "migrate:production": "rm -rf build && truffle compile && truffle migrate --network production"
   },
   "keywords": [
     "blockchain",
