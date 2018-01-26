@@ -1,1 +1,1 @@
-# AMZNANDYYY-token
+# ERC20-token contract with some customized configuration
